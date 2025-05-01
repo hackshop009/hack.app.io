@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const password = passwordInput.value.trim();
     
-    if (password === 'temp') {
+    if (password === 'thoha334') {
       // Correct password
       errorMessage.textContent = '';
       passwordInput.style.borderColor = '#0f0';
