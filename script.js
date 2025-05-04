@@ -1,5 +1,5 @@
 // Valid passwords
-const validPasswords = ["temp1", "temp2", "temp3"];
+const validPasswords = ["aas", "aas1", "aas2"];
 
 // DOM elements
 const landingPage = document.getElementById('landing-page');
