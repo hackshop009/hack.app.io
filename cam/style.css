@@ -1,0 +1,156 @@
+:root {
+  --primary: #0088cc;
+  --primary-hover: #0077b3;
+  --text: #2c3e50;
+  --bg: #f8f9fa;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --dark-accent: rgba(0, 0, 0, 0.1);
+  --magic-color: rgba(138, 43, 226, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg);
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+
+/* Mystical background elements */
+.magic-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--magic-color);
+  filter: blur(60px);
+  top: -100px;
+  left: -100px;
+  opacity: 0.8;
+  animation: float-magic 15s infinite ease-in-out;
+  z-index: -1;
+}
+
+.magic-circle-2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(0, 200, 255, 0.1);
+  filter: blur(80px);
+  bottom: -150px;
+  right: -100px;
+  opacity: 0.6;
+  animation: float-magic-2 18s infinite ease-in-out;
+  animation-delay: 3s;
+  z-index: -1;
+}
+
+@keyframes float-magic {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes float-magic-2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -30px) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.container {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  width: 90%;
+  margin: 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0088cc, #00bcd4, #0088cc);
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.permission-request {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: pulse-alert 2s infinite;
+}
+
+.permission-request p {
+  margin-bottom: 10px;
+  color: #d32f2f;
+}
+
+.permission-request button {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.permission-request button:hover {
+  background: #b71c1c;
+}
+
+@keyframes pulse-alert {
+  0% {
+    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+  }
+}
+
+/* Rest of your existing CSS... */
+/* [Previous CSS code remains the same] */
